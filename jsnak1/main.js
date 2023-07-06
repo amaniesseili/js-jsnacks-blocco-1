@@ -1,5 +1,5 @@
-const nomi = ["Amani","Karina","Sara","Claudia","Danila","Chiara","Tea","Naya" ]
-const cognomi = ["Esseili","Perez","Accardi","Pino","Santoro","Bernardini","Vecchioni","Colzani" ]
+const nomi = ["Amani","Karina","Sara","Claudia","Danila","Chiara","Tea","Naya","Federica","sofia" ]
+const cognomi = ["Esseili","Perez","Accardi","Pino","Santoro","Bernardini","Vecchioni","Colzani","Tardosi","Castaldo" ]
 
 const btnGenera = document.querySelector(".btn-genera");
 
@@ -15,57 +15,27 @@ for (let i=0; i<10; i++){
     cognomi[Math.floor(Math.random() * cognomi.length)];
 
     let nomeCompleto = nomeRandom + " " + cognomeRandom
+
+
+// ---------------------------------------
+    console.log( nomeCompleto);
+// -------------------------------------------------
+
+
+    // //---- Creo li virtuale da inserire nell html -----------
+    // // STEP1: porto la ul in js
+    // let ul = getElementById("invitati-lista")
+
+    // // step2: creo l'elemento  li virtualmente in js
+    // let li = document.createElement ("li");
+
+    // // step3: aggiungo il contenuto all'elemento li
+    // li.classList.add("nomeCompleto")
+
+    // // step4:aggiungo l'elemento li all'elemento ul 
+    // ul.append(li);
+
+    // nomeCompleto.append(li);
+// ----------------------------------------------------
+
 }
-
-
-
-function generaInvitati() {
-    var listaInvitati = document.getElementById("invitati-lista");
-    listaInvitati.innerHTML = ""; // Resetta la lista ad ogni generazione
-
-    // Genera 10 nomi casuali
-    for (var i = 0; i < 10; i++) {
-        var nomeCasuale = nomi[Math.floor(Math.random() * nomi.length)];
-        var cognomeCasuale = cognomi[Math.floor(Math.random() * cognomi.length)];
-        var nomeCompleto = nomeCasuale + " " + cognomeCasuale;
-
-        // Aggiungi il nome alla lista
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(nomeCompleto));
-        listaInvitati.appendChild(li);
-    }
-}
-
-
-// controllare il vincitore 
-btnGenera.addEventListener ("click", function() {
-
-    var userRandomNumber =
-    Math.floor(Math.random() * 6) + 1; 
-   
-   document.getElementById("user-rand-num").innerHTML =  userRandomNumber;
-   
-   
-    // numero random per il computer
-   var computerRandomNumber =
-    Math.floor(Math.random() * 6) + 1; 
-   
-   document.getElementById("com-rand-num").innerHTML = computerRandomNumber;
-   
-
-    if (userRandomNumber > computerRandomNumber ){
-        document.getElementById("final.mess").innerHTML = ( "Il giocatore ha vinto ");
-    
-    }else if (userRandomNumber < computerRandomNumber){
-        document.getElementById("final.mess").innerHTML = ( "Il computer ha vinto ");
-
-    }else{
-        document.getElementById("final.mess").innerHTML = ( " E UN PAREGGIO  ");
-    }
-
-    // per nasconder il numeri random
-    // document.getElementById("com-rand-num").classList.add("d-none")
-    // document.getElementById("user-rand-num").classList.add("d-none")
-
-})
-

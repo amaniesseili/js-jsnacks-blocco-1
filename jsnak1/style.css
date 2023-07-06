@@ -1,0 +1,29 @@
+ body {
+    /* come faccio l'img trasparente */
+    /* background-color: rgba(0, 0, 0.25); */
+    background-image: url(img/ama.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.75;
+}  
+header{
+    height: 50px;
+    /* background-color: #367FBF; */
+}
+footer{
+    height: 16px;
+    background-color:#020873;
+}
+
+main{
+    height: calc(100vh - 160px);
+    
+}
+
+.line{
+    background-color: #020873;
+    height: 21px;
+    width: 700px;
+}
+
